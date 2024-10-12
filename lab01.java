@@ -19,24 +19,30 @@ public class lab01 {
         double[][] a = new double[11][12];
         for (int line = 0; line <11; line++){
             for (int row = 0; row<12; row++){
-                if (g[line]==10){
-                    a[line][row] = Math.sin(Math.cos(Math.pow(x[row], 1.0 / (2.0) -x[row])));
-                }
-                else if (g[line] == 4 || g[line] == 8 || g[line] == 14 || g[line] == 20 || g[line] == 22){
-                    a[line][row] = Math.log(Math.sqrt(Math.pow(Math.cos(x[row]), 2)));
-                }
-                else {
-                    a[line][row] = Math.cos(Math.cos(Math.exp(Math.exp(x[row]))));
+                switch (g[line]) {
+                    case 10:
+                        a[line][row] = Math.sin(Math.cos(Math.pow(x[row], 1.0 / (2.0) -x[row])));
+                        break;
+                    case 4:
+                    case 8:
+                    case 14:
+                    case 20:
+                    case 22:
+                        a[line][row] = Math.log(Math.sqrt(Math.pow(Math.cos(x[row]), 2)));
+                        break;
+                    default:
+                        a[line][row] = Math.cos(Math.cos(Math.exp(Math.exp(x[row]))));
+                        break;
                 }
             }
         }
 
         //4
-        for (int l = 0; l < a.length; l++){
-            for (int r = 0; r < a[l].length; r++){
-                System.out.printf("%.4f ", a[l][r]);
+        for (double[] a1 : a) {
+            for (double a2: a1) {
+                System.out.printf("%.4f ", a2);
             }
-        System.out.println();
+            System.out.println();
         }
     }
 }
