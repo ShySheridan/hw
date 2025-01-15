@@ -3,10 +3,9 @@ package pokemons;
 import moves.BubbleBeam;
 import moves.Scald;
 import moves.Supersonic;
-import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
-public class Marill extends Pokemon {
+public class Marill extends Azurill {
     public Marill(String name, int lvl) {
         super(name, lvl);
         super.setStats(70, 20, 50, 20, 50, 40);

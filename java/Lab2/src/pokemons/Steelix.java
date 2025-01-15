@@ -1,10 +1,9 @@
 package pokemons;
 
 import moves.*;
-import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
-public class Steelix extends Pokemon {
+public final class Steelix extends Onix {
     public Steelix(String name, int lvl) {
         super(name, lvl);
         super.setStats(75, 85, 200, 55, 65, 30);

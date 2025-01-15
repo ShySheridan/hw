@@ -1,8 +1,8 @@
-package StoryWorld;
+package Services;
 
 import Characters.Ruler;
 
-class Park {
+public class Park {
     private boolean isOpen;
 
     public Park() {

@@ -8,7 +8,7 @@ import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
 
-public class Absol extends Pokemon {
+public final class Absol extends Pokemon {
     //final private List<Move> attacks = new ArrayList<>();
     public Absol (String name, int lvl) {
         super(name, lvl);

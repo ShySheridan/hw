@@ -6,11 +6,6 @@ import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
 public class ZenHeadbutt extends PhysicalMove {
-    //public PhysicalMove(Type type,
-    //                    double pow,
-    //                    double acc,
-    //                    int priority,
-    //                    int hits
     boolean flinch = false;
     public ZenHeadbutt(){
         super(Type.PSYCHIC, 80, 90);}

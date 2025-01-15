@@ -1,0 +1,94 @@
+{
+    "even_week": true,
+    "group_name": "P3118",
+    "schedule": [
+        {
+            "date": "Monday, 2 Dec 2024",
+            "classes": [
+                {
+                    "subject": "Calculus",
+                    "class_format": "face-to-face",
+                    "type": "lecture",
+                    "campus": "Кронверкский пр., д.49, лит.А",
+                    "auditory": "1402",
+                    "teacher": "Холодова Светлана Евгеньевна",
+                    "time": {
+                        "period": 1,
+                        "from_time": "08:20",
+                        "to_time": "09:50"
+                    }
+                },
+                {
+                    "subject": "Modern_dance",
+                    "class_format": "face-to-face",
+                    "type": "physical_education",
+                    "campus": "Альпийский переулок 15, к.2",
+                    "auditory": "245",
+                    "teacher": "Кукина Елизавета Юрьевна",
+                    "time": {
+                        "period": 7,
+                        "from_time": "19:00",
+                        "to_time": "21:00"
+                    }
+                }
+            ]
+        },
+        {
+            "date": "Tuesday, 3 Dec 2024",
+            "classes": [
+                {
+                    "subject": "English",
+                    "class_format": "face-to-face",
+                    "type": "practice",
+                    "campus": "ул. Ломоносова 9",
+                    "auditory": "3211",
+                    "teacher": "Ермакова Елена Владиславовна",
+                    "time": {
+                        "period": 1,
+                        "from_time": "08:20",
+                        "to_time": "09:50"
+                    }
+                },
+                {
+                    "subject": "English",
+                    "class_format": "face-to-face",
+                    "type": "practice",
+                    "campus": "ул. Ломоносова 9",
+                    "auditory": "3211",
+                    "teacher": "Ермакова Елена Владиславовна",
+                    "time": {
+                        "period": 2,
+                        "from_time": "10:00",
+                        "to_time": "11:30"
+                    }
+                },
+                {
+                    "subject": "Discrete_Math",
+                    "class_format": "face-to-face",
+                    "type": "lecture",
+                    "campus": "Кронверкский пр., д.49, лит.А",
+                    "auditory": "1404",
+                    "teacher": "Карпов Дмитрий Валерьевич",
+                    "time": {
+                        "period": 7,
+                        "from_time": "18:40",
+                        "to_time": "20:10"
+                    }
+                },
+                {
+                    "subject": "Discrete_Math",
+                    "class_format": "face-to-face",
+                    "type": "practice",
+                    "campus": "Кронверкский пр., д.49, лит.А",
+                    "auditory": "2307",
+                    "teacher": "Лучинкин Константин Сергеевич",
+                    "time": {
+                        "period": 8,
+                        "from_time": "20:20",
+                        "to_time": "21:50"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-package Characters.bodyParts;
+package Characters.features;
 
 import java.util.Objects;
 
@@ -7,6 +7,9 @@ public class Mustache {
     private boolean dipped;
 
     public Mustache(int inkLevel) {
+        if (inkLevel <0){
+            throw new IllegalArgumentException("ink level can`t be less that zero");
+        }
         this.inkLevel = inkLevel;
         this.dipped = false;
     }

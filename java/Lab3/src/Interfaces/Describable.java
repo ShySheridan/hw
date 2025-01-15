@@ -1,4 +1,4 @@
-package Characters;
+package Interfaces;
 
 public interface Describable {
     void describe();
