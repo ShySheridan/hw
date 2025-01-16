@@ -1,13 +1,12 @@
 package Characters.features;
 
-public class CabbageSeeds {
-    private int unripeSeeds;
-
-    public CabbageSeeds(int unripeSeeds){
-        if (unripeSeeds < 0) {
-            throw new IllegalArgumentException("the number of seeds cannot be less than zero");
-        }
-        this.unripeSeeds = unripeSeeds;
-        }
+public record CabbageSeeds(int totalSeeds, int sproutedSeeds) {
+    public double successRate() {
+        return totalSeeds > 0 ? (double) sproutedSeeds / totalSeeds * 100 : 0.0;
+    }
+    @Override
+    public String toString() {
+        return String.format("Total seeds: %d, Sprouted seeds: %d, Success rate: %.2f%%",
+                totalSeeds, sproutedSeeds, successRate());
     }
 }

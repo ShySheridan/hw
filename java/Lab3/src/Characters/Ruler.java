@@ -5,6 +5,7 @@ import enums.Location;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Ruler extends AbstractCharacter {
     private static final List<Ruler> rulers = new ArrayList<>();
@@ -31,5 +32,24 @@ public class Ruler extends AbstractCharacter {
     @Override
     public void describe() {
         System.out.println("I am " + name );
+    }
+
+    @Override
+    public String toString(){
+        return String.format("Character{name='%s', type=%s, location=%s}", name, type, location);
+
+    }
+
+    @Override
+    public  boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AbstractCharacter character = (AbstractCharacter) o;
+        return Objects.equals(name, character.name) && type == character.type;
+    }
+
+    @Override
+    public  int hashCode() {
+        return Objects.hash(name, type);
     }
 }

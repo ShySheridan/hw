@@ -4,8 +4,6 @@ import Interfaces.Describable;
 import enums.CharacterType;
 import enums.Location;
 
-import java.util.Objects;
-
 public abstract class AbstractCharacter implements Describable {
     protected String name;
     protected CharacterType type;
@@ -27,21 +25,10 @@ public abstract class AbstractCharacter implements Describable {
 
     public abstract void act();
 
-    @Override
-    public String toString() {
-        return String.format("Character{name='%s', type=%s, location=%s}", name, type, location);
-    }
+    public abstract String toString();
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        AbstractCharacter character = (AbstractCharacter) o;
-        return Objects.equals(name, character.name) && type == character.type;
-    }
+    public abstract boolean equals(Object o);
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, type);
-    }
+    public abstract int hashCode();
+
 }
