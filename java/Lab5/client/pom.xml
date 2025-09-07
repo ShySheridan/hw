@@ -35,7 +35,7 @@
                             <finalName>client</finalName>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>src.ClientMain</mainClass>
+                                    <mainClass>Lab5.client.src.ClientMain</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
