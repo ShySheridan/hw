@@ -1,4 +1,4 @@
-package Characters;
+package Lab3.src.Characters;
 
 import Characters.features.Mustache;
 import Characters.features.NotEnoughInkException;
@@ -7,7 +7,7 @@ import enums.Location;
 
 import java.util.Objects;
 
-public class LukPorey extends AbstractCharacter {
+public class LukPorey extends Characters.AbstractCharacter {
     private final Mustache mustache;
 
     public LukPorey(int inkLevel, Location location) {
@@ -43,7 +43,7 @@ public class LukPorey extends AbstractCharacter {
     public  boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        AbstractCharacter character = (AbstractCharacter) o;
+        Characters.AbstractCharacter character = (Characters.AbstractCharacter) o;
         return Objects.equals(name, character.name) && type == character.type;
     }
 

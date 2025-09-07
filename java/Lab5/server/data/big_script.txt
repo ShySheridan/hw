@@ -1,0 +1,165 @@
+# ===== BIG SCRIPT FOR execute_script =====
+help
+info
+show
+print_field_descending_author
+# ---- Count by known authors ----
+count_by_author John Doe
+count_by_author Jane Smith
+count_by_author Emily Brown
+count_by_author Michael Johnson
+count_by_author Olivia Davis
+count_by_author William Miller
+count_by_author Ava Wilson
+count_by_author James Moore
+count_by_author Sophia Taylor
+count_by_author Benjamin Anderson
+count_by_author Mia Thomas
+count_by_author Lucas Jackson
+count_by_author Charlotte White
+count_by_author Henry Harris
+count_by_author Amelia Martin
+count_by_author Ethan Thompson
+count_by_author Isabella Garcia
+count_by_author Alexander Martinez
+count_by_author Evelyn Robinson
+count_by_author Daniel Clark
+count_by_author Harper Rodriguez
+count_by_author Matthew Lewis
+count_by_author Abigail Lee
+count_by_author Joseph Walker
+count_by_author Emily Hall
+count_by_author David Allen
+count_by_author Aria Young
+count_by_author Andrew King
+count_by_author Ella Wright
+count_by_author Samuel Scott
+count_by_author Victoria Green
+count_by_author Christopher Baker
+count_by_author Grace Adams
+count_by_author Anthony Nelson
+count_by_author Chloe Carter
+count_by_author Jonathan Mitchell
+count_by_author Lily Perez
+count_by_author Ryan Roberts
+count_by_author Zoey Turner
+count_by_author Nathan Phillips
+count_by_author Hannah Campbell
+count_by_author Dylan Parker
+count_by_author Layla Evans
+count_by_author Caleb Edwards
+count_by_author Penelope Collins
+count_by_author Sebastian Stewart
+count_by_author Nora Sanchez
+count_by_author Jack Morris
+count_by_author Avery Rogers
+count_by_author Levi Reed
+# ---- Filters by lab name prefixes ----
+filter_starts_with_name Physics
+filter_starts_with_name Computer
+filter_starts_with_name Chemistry
+filter_starts_with_name Biology
+filter_starts_with_name Mathematics
+filter_starts_with_name Robotics
+filter_starts_with_name Astronomy
+filter_starts_with_name Geology
+filter_starts_with_name Ecology
+filter_starts_with_name Nanotech
+filter_starts_with_name Quantum
+filter_starts_with_name AI
+filter_starts_with_name Data
+filter_starts_with_name Cybernetics
+filter_starts_with_name Signal
+filter_starts_with_name Photonics
+filter_starts_with_name Materials
+filter_starts_with_name Thermodynamics
+filter_starts_with_name Electronics
+filter_starts_with_name Microbiology
+filter_starts_with_name Biomechanics
+filter_starts_with_name Hydraulics
+filter_starts_with_name Aerodynamics
+filter_starts_with_name Mechatronics
+filter_starts_with_name Bioinformatics
+filter_starts_with_name Neuroscience
+filter_starts_with_name Vision
+filter_starts_with_name Cryptography
+filter_starts_with_name Parallel
+filter_starts_with_name Distributed
+filter_starts_with_name Human
+filter_starts_with_name Embedded
+filter_starts_with_name Compilers
+filter_starts_with_name Operating
+filter_starts_with_name Network
+filter_starts_with_name Graphics
+filter_starts_with_name Game
+filter_starts_with_name Speech
+filter_starts_with_name Natural
+filter_starts_with_name Reinforcement
+filter_starts_with_name Control
+filter_starts_with_name Power
+filter_starts_with_name Renewable
+filter_starts_with_name Mining
+filter_starts_with_name Petroleum
+filter_starts_with_name Civil
+filter_starts_with_name Structural
+filter_starts_with_name Transportation
+filter_starts_with_name Urban
+filter_starts_with_name Environmental
+# ---- Remove by ids (some may not exist) ----
+remove_by_id 1
+remove_by_id 2
+remove_by_id 3
+remove_by_id 4
+remove_by_id 5
+remove_by_id 6
+remove_by_id 7
+remove_by_id 8
+remove_by_id 9
+remove_by_id 10
+remove_by_id 11
+remove_by_id 12
+remove_by_id 13
+remove_by_id 14
+remove_by_id 15
+remove_by_id 16
+remove_by_id 17
+remove_by_id 18
+remove_by_id 19
+remove_by_id 20
+remove_by_id 21
+remove_by_id 22
+remove_by_id 23
+remove_by_id 24
+remove_by_id 25
+remove_by_id 26
+remove_by_id 27
+remove_by_id 28
+remove_by_id 29
+remove_by_id 30
+remove_by_id 42
+remove_by_id 1000
+remove_by_id 9223372036854775807
+remove_by_id 9223372036854775808
+# ---- Intentional bad commands to test errors ----
+abracadabra
+remove_byid 5
+count_by_author
+filter_starts_with_name
+remove_by_id abc
+# ---- Snapshots ----
+info
+show
+print_field_descending_author
+info
+show
+print_field_descending_author
+info
+show
+print_field_descending_author
+# ---- Clear & Save ----
+clear
+save
+info
+show
+# ---- Exit ----
+exit
