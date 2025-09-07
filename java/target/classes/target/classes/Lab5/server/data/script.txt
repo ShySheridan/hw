@@ -1,9 +1,0 @@
-help
-info
-show
-count_by_author Jane Smith
-filter_starts_with_name Chemistry
-print_field_descending_author
-clear
-save
-exit
