@@ -74,7 +74,7 @@ public class ExecuteScript implements Command {
 
         callStack.push(script);
         StringBuilder output = new StringBuilder();
-        try (Scanner scanner = new Scanner(script)) {
+        try (Scanner scanner = new Scanner(script)) { //:TODO: add constructing object for adding
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine().trim();
                 // Пропуск пустых строк и комментариев

@@ -17,6 +17,4 @@ nn
 33
 22
 22
-clear
-save
-exit
+
