@@ -6,10 +6,6 @@
     <artifactId>untitled</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-     <modules>
-          <module>Lab5/server</module>
-          <module>Lab5/client</module>
-     </modules>
     <name>untitled</name>
     <url>http://maven.apache.org</url>
 
