@@ -4,55 +4,27 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>lab5</groupId>
-        <artifactId>Lab5</artifactId>
+        <groupId>org.example</groupId>
+        <artifactId>lab5</artifactId>
         <version>1.0.0</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>server</artifactId>
     <packaging>jar</packaging>
-
-    <properties>
-        <!-- Укажи точный FQCN своего main-класса сервера -->
-        <mainClass>Lab5.server.src.ServerMain</mainClass>
-        <finalName>server-app</finalName>
-    </properties>
+    <name>lab5-server</name>
 
     <dependencies>
         <dependency>
-            <groupId>lab5</groupId>
+            <groupId>org.example</groupId>
             <artifactId>common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
-            <artifactId>jaxb-runtime</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
+            <version>${project.parent.version}</version>
         </dependency>
     </dependencies>
 
     <build>
-        <finalName>${finalName}</finalName>
         <plugins>
-            <!-- Манифест -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>${mainClass}</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-            <!-- Fat JAR -->
+            <!-- Собираем исполняемый fat-jar -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -61,7 +33,12 @@
                         <phase>package</phase>
                         <goals><goal>shade</goal></goals>
                         <configuration>
-                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <finalName>server</finalName>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>your.server.Main</mainClass>
+                                </transformer>
+                            </transformers>
                         </configuration>
                     </execution>
                 </executions>
