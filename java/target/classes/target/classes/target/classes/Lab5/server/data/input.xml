@@ -1,0 +1,61 @@
+<LabWorks>
+    <LabWork>
+        <name>Physics Lab</name>
+        <coordinates>
+            <x>10.5</x>
+            <y>20</y>
+        </coordinates>
+        <minimalPoint>75.0</minimalPoint>
+        <difficulty>EASY</difficulty>
+        <author>
+            <name>John Doe</name>
+            <height>180</height>
+            <nationality>SPAIN</nationality>
+            <location>
+                <x>100</x>
+                <y>50.5</y>
+                <z>-10.3</z>
+            </location>
+        </author>
+    </LabWork>
+
+    <LabWork>
+        <name>Computer Science Lab</name>
+        <coordinates>
+            <x>15.2</x>
+            <y>-500</y>
+        </coordinates>
+        <minimalPoint>90.5</minimalPoint>
+        <difficulty>HARD</difficulty>
+        <author>
+            <name>Jane Smith</name>
+            <height>165</height>
+            <nationality>INDIA</nationality>
+            <location>
+                <x>200</x>
+                <y>75.0</y>
+                <z>-20.8</z>
+            </location>
+        </author>
+    </LabWork>
+
+    <LabWork>
+        <name>Chemistry Lab</name>
+        <coordinates>
+            <x>-30.0</x>
+            <y>-100</y>
+        </coordinates>
+        <minimalPoint>60.0</minimalPoint>
+        <difficulty>IMPOSSIBLE</difficulty>
+        <author>
+            <name>Emily Brown</name>
+            <height>170</height>
+            <nationality>THAILAND</nationality>
+            <location>
+                <x>-300</x>
+                <y>25.5</y>
+                <z>-5.6</z>
+            </location>
+        </author>
+    </LabWork>
+</LabWorks>
