@@ -1,0 +1,9 @@
+FROM eclipse-temurin:17-jre
+WORKDIR /app
+
+COPY LabCode/src/client/target/client.jar /app/client.jar
+
+# адрес сервера внутри сети docker-compose
+ENV HOST=server
+ENV PORT=5555
+CMD ["sh","-lc","java -jar /app/client.jar $HOST $PORT"]

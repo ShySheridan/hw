@@ -45,6 +45,13 @@ public class LabWork implements Comparable<LabWork> {
         //id = createNewId();
         //creationDate = new java.util.Date();
     }
+    public LabWork(String name,  Coordinates coordinates, Float minimalPoint, Difficulty difficulty, Person author) {
+        this.name = name;
+        this.coordinates = coordinates;
+        this.minimalPoint = minimalPoint;
+        this.difficulty = difficulty;
+        this.author = author;
+    }
 
     public String getName() {
         return name;

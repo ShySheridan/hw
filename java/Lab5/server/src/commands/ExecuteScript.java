@@ -1,8 +1,10 @@
 package Lab5.server.src.commands;
 
-import Lab5.common.src.Request;
-import Lab5.common.src.Response;
+import Lab5.common.src.*;
+import Lab5.common.src.enums.Difficulty;
 import Lab5.server.src.CommandHandler;
+import Lab5.server.src.utils.LabReader;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -29,6 +31,12 @@ public class ExecuteScript implements Command {
      */
     public ExecuteScript(CommandHandler handler) {
         this.handler = handler;
+    }
+
+    private LabWork read_lab_work(Scanner scanner) {
+        LabReader reader = new LabReader(scanner);
+
+        return reader.readLab();
     }
 
     @Override
@@ -74,7 +82,7 @@ public class ExecuteScript implements Command {
 
         callStack.push(script);
         StringBuilder output = new StringBuilder();
-        try (Scanner scanner = new Scanner(script)) { //:TODO: add constructing object for adding
+        try (Scanner scanner = new Scanner(script)) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine().trim();
                 // Пропуск пустых строк и комментариев
@@ -83,8 +91,14 @@ public class ExecuteScript implements Command {
                 }
                 String[] parts = line.split("\\s+", 2);
                 String cmdName = parts[0];
-                String cmdArg  = parts.length > 1 ? parts[1].trim() : null;
-                Request inner = new Request(cmdName, cmdArg);
+                Request inner = null;
+                if (cmdName.equals("add") || cmdName.equals("add_if_min") || cmdName.equals("remove_greater") || cmdName.equals("remove_lower") || cmdName.equals("update")) {
+                    LabWork lab = read_lab_work(scanner);
+                    inner = new Request(cmdName, lab);
+                }else {
+                    String cmdArg = parts.length > 1 ? parts[1].trim() : null;
+                     inner = new Request(cmdName, cmdArg);
+                }
                 try {
                     Response resp = handler.handle(inner);
                     output.append(resp.getMessage()).append(System.lineSeparator());

@@ -4,6 +4,9 @@ import Lab5.common.src.enums.Color;
 import Lab5.common.src.enums.Country;
 import jakarta.xml.bind.annotation.*;
 
+import static Lab5.common.src.enums.Country.isValidCountry;
+import static Lab5.common.src.enums.Color.isValidColor;
+
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Person {

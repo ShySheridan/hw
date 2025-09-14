@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
+import static java.lang.Math.abs;
+
 public class IdGenerator {
     private static final Set<Long> usedIds = new HashSet<>();
     private static final Random random = new Random();

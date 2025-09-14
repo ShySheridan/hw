@@ -4,17 +4,6 @@ show
 count_by_author Jane Smith
 filter_starts_with_name Chemistry
 print_field_descending_author
-add
-Math
-777
-888444
-2
-nn
-555
-2
-3
-2
-33
-22
-22
-
+clear
+save
+exit

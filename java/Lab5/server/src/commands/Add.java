@@ -1,7 +1,12 @@
 package Lab5.server.src.commands;
 
 import Lab5.common.src.*;
+import Lab5.common.src.enums.Color;
+import Lab5.common.src.enums.Country;
+import Lab5.common.src.enums.Difficulty;
 import Lab5.server.src.CollectionManager;
+
+import java.util.Scanner;
 
 /**
  * Добавляет новый элемент в коллекцию
