@@ -33,22 +33,19 @@
             <groupId>com.lmax</groupId>
             <artifactId>disruptor</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
         </dependency>
 
-        <!-- JAXB оставь только если реально нужны JAXB-классы -->
+        <!-- Оставляй JAXB только если реально используется -->
         <dependency>
             <groupId>jakarta.xml.bind</groupId>
             <artifactId>jakarta.xml.bind-api</artifactId>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.glassfish.jaxb</groupId>
             <artifactId>jaxb-runtime</artifactId>
-            <scope>runtime</scope>
         </dependency>
     </dependencies>
 
@@ -77,11 +74,10 @@
                             <finalName>server</finalName>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <transformers>
-                                <!-- Main-Class укажи свой, если отличается -->
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>src.server.src.ServerMain</mainClass>
+                                    <!-- Укажи свой server_main, если отличается -->
+                                    <mainClass>server_main.ServerMain</mainClass>
                                 </transformer>
-                                <!-- для Log4J2 -->
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                             </transformers>
                         </configuration>

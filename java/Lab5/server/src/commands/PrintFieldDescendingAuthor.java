@@ -43,7 +43,15 @@ public class PrintFieldDescendingAuthor implements Command {
         StringBuilder sb = new StringBuilder();
         sb.append("Авторы: ").append("\n");
         for(Person author: authors) {
-            sb.append(author).append("\n");
+            sb.append("Author:\n")
+                    .append("  Name: ").append(author.getName()).append("\n")
+                    .append("  Height: ").append(author.getHeight()).append("\n")
+                    .append("  Eye Color: ").append(author.getEyeColor()).append("\n")
+                    .append("  Hair Color: ").append(author.getHairColor()).append("\n")
+                    .append("  Nationality: ").append(author.getNationality()).append("\n")
+                    .append("  Location: x=").append(author.getLocation().getX())
+                    .append(", y=").append(author.getLocation().getY())
+                    .append(", z=").append(author.getLocation().getZ()).append("\n");
         }
         return new Response(true, sb.toString().trim());
     }

@@ -1,0 +1,12 @@
+common_main/enums/Color.class
+common_main/IdGenerator.class
+common_main/LabWork.class
+common_main/enums/Difficulty.class
+common_main/Coordinates.class
+common_main/Response.class
+common_main/Person.class
+common_main/Request.class
+common_main/LabWorkList.class
+common_main/Location.class
+common_main/net/Serde.class
+common_main/enums/Country.class

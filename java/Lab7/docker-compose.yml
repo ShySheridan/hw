@@ -1,15 +1,44 @@
 services:
   pg:
-    image: postgres
-    container_name: lab-pg
+    image: postgres:16
+    container_name: lab7-pg
     restart: unless-stopped
     environment:
       POSTGRES_DB: studs
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 12345678
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
       TZ: Europe/Moscow
     ports:
       - "5432:5432"
     volumes:
 #      - ./db-data:/var/lib/postgresql/data
       - ./resources/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    container_name: lab7-server
+
+    environment:
+      DB_URL: jdbc:postgresql://pg:5432/studs
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      LOG_LEVEL: info
+    ports:
+      - "5555:5555"
+    restart: unless-stopped
+
+  # docker compose run --rm client
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    environment:
+      HOST: server
+      PORT: "5555"
+    stdin_open: true
+    tty: true
+    depends_on:
+      server:
+        condition: service_started

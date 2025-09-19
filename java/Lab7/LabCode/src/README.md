@@ -1,6 +1,6 @@
 # Условие задачи
 
-Реализовать консольное приложение, которое реализует управление коллекцией объектов в интерактивном режиме. В коллекции необходимо хранить объекты класса `LabWork`, описание которого приведено ниже.
+Реализовать консольное приложение, которое реализует управление коллекцией объектов в интерактивном режиме. В коллекции необходимо хранить объекты класса `server_main.LabWork`, описание которого приведено ниже.
 
 ## Общие требования к программе
 
@@ -46,46 +46,50 @@
 
 ## Описание хранимых в коллекции классов
 
-### Класс `LabWork`
+### Класс `server_main.LabWork`
 
 ```java
-public class LabWork {
+public class main.
+
+LabWork {
     private long id; // Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; // Поле не может быть null, Строка не может быть пустой
-    private Coordinates coordinates; // Поле не может быть null
+    private server_main.Coordinates coordinates; // Поле не может быть null
     private java.util.Date creationDate; // Поле не может быть null, Значение этого поля должно генерироваться автоматически
     private Float minimalPoint; // Поле может быть null, Значение поля должно быть больше 0
     private Difficulty difficulty; // Поле не может быть null
-    private Person author; // Поле может быть null
+    private server_main.Person author; // Поле может быть null
 }
 ```
 
-### Класс `Coordinates`
+### Класс `server_main.Coordinates`
 
 ```java
-public class Coordinates {
+public class server_main.Coordinates {
     private Double x; // Поле не может быть null
     private float y; // Значение поля должно быть больше -763
 }
 ```
 
-### Класс `Person`
+### Класс `server_main.Person`
 
 ```java
-public class Person {
+public class main.
+
+Person {
     private String name; // Поле не может быть null, Строка не может быть пустой
     private Integer height; // Поле не может быть null, Значение поля должно быть больше 0
     private Color eyeColor; // Поле может быть null
     private Color hairColor; // Поле может быть null
     private Country nationality; // Поле не может быть null
-    private Location location; // Поле не может быть null
+    private server_main.Location location; // Поле не может быть null
 }
 ```
 
-### Класс `Location`
+### Класс `server_main.Location`
 
 ```java
-public class Location {
+public class server_main.Location {
     private long x;
     private float y;
     private double z;
