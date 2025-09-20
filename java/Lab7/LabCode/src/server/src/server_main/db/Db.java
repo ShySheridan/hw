@@ -20,8 +20,8 @@ public class Db {
     public static Db fromEnv() {
         String url = System.getProperty("DB_URL",
                 "jdbc:postgresql://pg:5432/studs");
-        String user = "postgres";//System.getProperty("DB_USER", System.getenv("DB_USER"));
-        String pass = "12345678";//System.getProperty("DB_PASS", System.getenv("DB_PASS"));
+        String user = "s467802";//System.getProperty("DB_USER", System.getenv("DB_USER"));
+        String pass = "dhRL_2764";//System.getProperty("DB_PASS", System.getenv("DB_PASS"));
         if (user == null) user = System.getenv("USER");
         if (pass == null) pass = "";
         return new Db(url, user, pass);
