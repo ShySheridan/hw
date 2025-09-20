@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: ${DB_PASS}
       TZ: Europe/Moscow
     ports:
-      - "5432:5432"
+      - "5431:5432"
     volumes:
 #      - ./db-data:/var/lib/postgresql/data
       - ./resources/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
@@ -26,7 +26,7 @@ services:
       DB_PASS: ${DB_PASS}
       LOG_LEVEL: info
     ports:
-      - "5555:5555"
+      - "5554:5555"
     restart: unless-stopped
 
   # docker compose run --rm client

@@ -19,7 +19,7 @@ public class Db {
 
     public static Db fromEnv() {
         String url = System.getProperty("DB_URL",
-                "jdbc:postgresql://localhost:5532/studs");
+                "jdbc:postgresql://pg:5432/studs");
         String user = "postgres";//System.getProperty("DB_USER", System.getenv("DB_USER"));
         String pass = "12345678";//System.getProperty("DB_PASS", System.getenv("DB_PASS"));
         if (user == null) user = System.getenv("USER");
